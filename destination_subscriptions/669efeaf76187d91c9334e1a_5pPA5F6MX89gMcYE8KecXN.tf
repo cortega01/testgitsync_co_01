@@ -6,9 +6,9 @@ import {
 resource "segment_destination_subscription" "id-669efeaf76187d91c9334e1a_5pPA5F6MX89gMcYE8KecXN" {
   action_id      = "ifeXsLqNNjJ5HJdRKSJwea"
   destination_id = "669efeaf76187d91c9334e1a"
-  enabled        = false
+  enabled        = true
   model_id       = null
   name           = "Identify Calls"
-  settings       = "{\"dataFields\":{\"@template\":\"{{traits}}\"},\"email\":{\"@template\":\"{{traits.email}}\"},\"mergeNestedObjects\":false,\"phoneNumber\":{\"@template\":\"{{traits.phone}}\"},\"userId\":{\"@template\":\"{{userId}}\"}}"
+  settings       = "{\"dataFields\":{\"@path\":\"$.traits\"},\"email\":{\"@path\":\"$.traits.email\"},\"mergeNestedObjects\":false,\"phoneNumber\":{\"@path\":\"$.traits.phone\"},\"userId\":{\"@path\":\"$.userId\"}}"
   trigger        = "type = \"identify\""
 }
