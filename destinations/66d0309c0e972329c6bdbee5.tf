@@ -4,7 +4,7 @@ import {
 }
 
 resource "segment_destination" "id-66d0309c0e972329c6bdbee5" {
-  enabled = false
+  enabled = true
   metadata = {
     contacts          = null
     id                = "54521fd525e721e32a72eeac"
@@ -13,6 +13,6 @@ resource "segment_destination" "id-66d0309c0e972329c6bdbee5" {
     supported_regions = null
   }
   name      = "Eloqua Destination Test JS"
-  settings  = "{\"companyName\":\"TechnologyPartnerSegmentio\",\"createContactOnTrack\":false,\"mappedEvents\":{},\"mappedGroupTraits\":{},\"mappedIdentifyTraits\":{},\"password\":\"••••••••••234!\",\"sendGroup\":false,\"siteId\":\"p02\",\"username\":\"Calvin.French-Owen\"}"
+  settings  = "{\"companyName\":\"TechnologyPartnerSegmentio\",\"createContactOnTrack\":false,\"mappedEvents\":{},\"mappedGroupTraits\":{},\"mappedIdentifyTraits\":{\"contactType\":\"C_contactType1\"},\"password\":\"••••••••••234!\",\"sendGroup\":false,\"siteId\":\"p02\",\"username\":\"Calvin.French-Owen\"}"
   source_id = "f9XSryLD3S4oTyquhekAit"
 }
