@@ -13,6 +13,6 @@ resource "segment_destination" "id-66d02e3ad56a0d507d0afa78" {
     supported_regions = null
   }
   name      = "Eloqua Destination Test 1"
-  settings  = "{\"companyName\":\"\",\"createContactOnTrack\":false,\"mappedEvents\":{},\"mappedGroupTraits\":{},\"mappedIdentifyTraits\":{},\"password\":\"••••••••••234!\",\"sendGroup\":false,\"siteId\":\"\",\"username\":\"Calvin.French-Owen\"}"
+  settings  = "{\"companyName\":\"\",\"createContactOnTrack\":false,\"mappedEvents\":{},\"mappedGroupTraits\":{},\"mappedIdentifyTraits\":{},\"password\":\"••••••••••234!\",\"sendGroup\":false,\"siteId\":\"p02\",\"username\":\"Calvin.French-Owen\"}"
   source_id = "hbHTwZCSYHvegNutaqq1wc"
 }
