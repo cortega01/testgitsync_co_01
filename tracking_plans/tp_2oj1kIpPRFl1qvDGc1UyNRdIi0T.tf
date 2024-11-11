@@ -13,6 +13,12 @@ resource "segment_tracking_plan" "id-tp_2oj1kIpPRFl1qvDGc1UyNRdIi0T" {
       type        = "TRACK"
       version     = 1
     },
+    {
+      json_schema = "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"description\":\"User submits form\",\"properties\":{\"context\":{},\"properties\":{\"properties\":{\"form_type\":{\"description\":\"Type of form (web, app)\",\"id\":\"/properties/properties/properties/form_type\",\"type\":\"string\"}},\"required\":[\"form_type\"],\"type\":\"object\"},\"traits\":{\"type\":\"object\"}},\"required\":[\"properties\"],\"type\":\"object\"}"
+      key         = "Form Submitted"
+      type        = "TRACK"
+      version     = 1
+    },
   ]
   type = "LIVE"
 }
