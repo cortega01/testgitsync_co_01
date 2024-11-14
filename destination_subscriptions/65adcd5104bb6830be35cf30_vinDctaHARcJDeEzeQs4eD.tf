@@ -9,6 +9,6 @@ resource "segment_destination_subscription" "id-65adcd5104bb6830be35cf30_vinDcta
   enabled        = false
   model_id       = null
   name           = "Send Event to Data Extension"
-  settings       = "{\"batch_size\":50,\"enable_batching\":false}"
-  trigger        = "event = \"\""
+  settings       = "{\"batch_size\":10,\"enable_batching\":false,\"id\":{\"@path\":\"$.properties.details.mergedLimit\"},\"keys\":{\"anonymous_Id\":{\"@path\":\"$.anonymousId\"}},\"values\":{\"product_id\":{\"@path\":\"$.properties.details.product_id\"}}}"
+  trigger        = "event = \"Order Completed\""
 }
