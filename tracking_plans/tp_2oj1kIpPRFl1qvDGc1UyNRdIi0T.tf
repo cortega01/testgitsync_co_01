@@ -19,6 +19,12 @@ resource "segment_tracking_plan" "id-tp_2oj1kIpPRFl1qvDGc1UyNRdIi0T" {
       type        = "TRACK"
       version     = 1
     },
+    {
+      json_schema = "{\"properties\":{\"context\":{},\"properties\":{},\"traits\":{}}}"
+      key         = null
+      type        = "COMMON"
+      version     = 1
+    },
   ]
   type = "LIVE"
 }
