@@ -20,7 +20,7 @@ resource "segment_tracking_plan" "id-tp_2oj1kIpPRFl1qvDGc1UyNRdIi0T" {
       version     = 1
     },
     {
-      json_schema = "{\"properties\":{\"context\":{},\"properties\":{},\"traits\":{}}}"
+      json_schema = "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"properties\":{\"context\":{},\"properties\":{},\"traits\":{}},\"required\":[\"blockIdentifyAndGroup\"],\"type\":\"object\"}"
       key         = null
       type        = "COMMON"
       version     = 1
