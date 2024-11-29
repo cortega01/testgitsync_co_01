@@ -13,6 +13,12 @@ resource "segment_tracking_plan" "id-tp_2dyvv0N20QbUIpESkoyk8z6CvAY" {
       type        = "TRACK"
       version     = 1
     },
+    {
+      json_schema = "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"properties\":{\"context\":{},\"properties\":{\"type\":\"object\"},\"traits\":{\"type\":\"object\"}},\"type\":\"object\"}"
+      key         = "Promotion Clicked"
+      type        = "TRACK"
+      version     = 1
+    },
   ]
   type = "RULE_LIBRARY"
 }
