@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-6515b96bdaa132bcbb8ee565_tvv77utQ1a8ipZLS5KT2ER" {
   action_id      = "9cmB51ubHWyRFyhaCbYV8u"
   destination_id = "6515b96bdaa132bcbb8ee565"
-  enabled        = false
+  enabled        = true
   model_id       = null
   name           = "Send Custom Behavioral Event - Profile enters"
   settings = jsonencode({
