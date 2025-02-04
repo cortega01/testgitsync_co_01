@@ -10,6 +10,6 @@ resource "segment_source" "id-7U1pz1W1ESiasVbLSGWWzT" {
     id = "dBg7wLNWBb"
   }
   name     = "Personas (2)"
-  settings = "{}"
+  settings = jsonencode({})
   slug     = "personas_cortega_dev2"
 }
