@@ -38,7 +38,7 @@ resource "segment_destination_subscription" "id-67b53ab79d11260d00e0ae69_465vmZA
     }
     custom_attributes = {
       subscription_groups = {
-        "@path" = "$.properties.subscription_groups"
+        "@path" = "$.properties.promotion_type"
       }
     }
     email = {
