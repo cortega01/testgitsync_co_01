@@ -4,7 +4,7 @@ import {
 }
 
 resource "segment_destination" "id-67b53ab79d11260d00e0ae69" {
-  enabled = false
+  enabled = true
   metadata = {
     contacts          = null
     id                = "60f9d0d048950c356be2e4da"
@@ -14,8 +14,11 @@ resource "segment_destination" "id-67b53ab79d11260d00e0ae69" {
   }
   name = "Braze HTTP API 1 (Development)"
   settings = jsonencode({
-    api_key  = ""
-    app_id   = ""
+    api_key = "••••••••••a5ea"
+    app_id  = ""
+    dynamicAuthSettings = {
+      configId = "67b53ab79d11260d00e0ae69"
+    }
     endpoint = "https://rest.iad-01.braze.com"
   })
   source_id = "hbHTwZCSYHvegNutaqq1wc"
