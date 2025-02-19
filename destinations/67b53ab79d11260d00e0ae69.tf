@@ -14,7 +14,7 @@ resource "segment_destination" "id-67b53ab79d11260d00e0ae69" {
   }
   name = "Braze HTTP API 1 (Development)"
   settings = jsonencode({
-    api_key = "••••••••••855a"
+    api_key = "••••••••••a5ea"
     app_id  = ""
     dynamicAuthSettings = {
       configId = "67b53ab79d11260d00e0ae69"
