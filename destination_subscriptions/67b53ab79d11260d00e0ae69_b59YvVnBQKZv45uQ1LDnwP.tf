@@ -8,14 +8,14 @@ resource "segment_destination_subscription" "id-67b53ab79d11260d00e0ae69_b59YvVn
   destination_id = "67b53ab79d11260d00e0ae69"
   enabled        = false
   model_id       = null
-  name           = "Identify Calls (Copy)"
+  name           = "Newsletter Subscription | Brand 2"
   settings = jsonencode({
     _update_existing_only = false
     batch_size            = 75
     braze_id = {
       "@if" = {
         else = {
-          "@template" = "{{traits.braze_id}}"
+          "@path" = "$.traits.braze_id"
         }
         exists = {
           "@template" = "{{integrations.Braze Cloud Mode (Actions).braze_id}}"
@@ -26,45 +26,45 @@ resource "segment_destination_subscription" "id-67b53ab79d11260d00e0ae69_b59YvVn
       }
     }
     country = {
-      "@template" = "{{context.location.country}}"
+      "@path" = "$.context.location.country"
     }
     current_location = {
       latitude = {
-        "@template" = "{{context.location.latitude}}"
+        "@path" = "$.context.location.latitude"
       }
       longitude = {
-        "@template" = "{{context.location.longitude}}"
+        "@path" = "$.context.location.longitude"
       }
     }
     custom_attributes = {
       subscription_groups = {
-        "@template" = "{{properties.promotion_type}}"
+        "@path" = "$.properties.promotion_type"
       }
     }
     email = {
-      "@template" = "{{properties.email}}"
+      "@path" = "$.properties.email"
     }
     enable_batching = true
     external_id = {
-      "@template" = "{{userId}}"
+      "@path" = "$.userId"
     }
     first_name = {
-      "@template" = "{{traits.firstName}}"
+      "@path" = "$.traits.firstName"
     }
     gender = {
-      "@template" = "{{traits.gender}}"
+      "@path" = "$.traits.gender"
     }
     home_city = {
-      "@template" = "{{traits.address.city}}"
+      "@path" = "$.traits.address.city"
     }
     image_url = {
-      "@template" = "{{traits.avatar}}"
+      "@path" = "$.traits.avatar"
     }
     last_name = {
-      "@template" = "{{traits.lastName}}"
+      "@path" = "$.traits.lastName"
     }
     phone = {
-      "@template" = "{{traits.phone}}"
+      "@path" = "$.traits.phone"
     }
   })
   trigger = "type = \"track\" and event = \"Newsletter Subscription\""
