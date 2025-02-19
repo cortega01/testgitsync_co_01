@@ -38,11 +38,11 @@ resource "segment_destination_subscription" "id-67b53ab79d11260d00e0ae69_465vmZA
     }
     custom_attributes = {
       subscription_groups = {
-        "@path" = "$.traits.sub_groups"
+        "@path" = "$.properties.subscription_groups"
       }
     }
     email = {
-      "@path" = "$.traits.email"
+      "@path" = "$.properties.email"
     }
     enable_batching = true
     external_id = {
@@ -67,5 +67,5 @@ resource "segment_destination_subscription" "id-67b53ab79d11260d00e0ae69_465vmZA
       "@path" = "$.traits.phone"
     }
   })
-  trigger = "type = \"identify\""
+  trigger = "type = \"track\" and event = \"Newsletter Subscription\""
 }
