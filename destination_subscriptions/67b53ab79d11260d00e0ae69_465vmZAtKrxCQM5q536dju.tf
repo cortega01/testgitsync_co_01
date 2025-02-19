@@ -8,7 +8,7 @@ resource "segment_destination_subscription" "id-67b53ab79d11260d00e0ae69_465vmZA
   destination_id = "67b53ab79d11260d00e0ae69"
   enabled        = true
   model_id       = null
-  name           = "Identify Calls"
+  name           = "Newsletter Subscription | Brand 1"
   settings = jsonencode({
     _update_existing_only = false
     batch_size            = 75
