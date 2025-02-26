@@ -59,7 +59,7 @@ resource "segment_destination_subscription" "id-66ea2abcb10a85d855031ad2_sdPVSYb
       "@path" = "$.properties.order_id"
     }
     event_name = {
-      "@path" = "$.event"
+      "@template" = "{{event}} TEST82273"
     }
     event_source_url = {
       "@path" = "$.context.page.url"
@@ -67,6 +67,7 @@ resource "segment_destination_subscription" "id-66ea2abcb10a85d855031ad2_sdPVSYb
     event_time = {
       "@path" = "$.timestamp"
     }
+    test_event_code = "TEST82273"
     user_data = {
       city = {
         "@path" = "$.context.traits.address.city"
