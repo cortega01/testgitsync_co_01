@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-66ea2abcb10a85d855031ad2_31VphjHnBwmvw5FnCBWvMG" {
   action_id            = "8whh4kyqahLHgTJqUwvEwh"
   destination_id       = "66ea2abcb10a85d855031ad2"
-  enabled              = false
+  enabled              = true
   model_id             = null
   name                 = "Purchase (Copy)"
   reverse_etl_schedule = null
@@ -14,120 +14,120 @@ resource "segment_destination_subscription" "id-66ea2abcb10a85d855031ad2_31VphjH
     action_source = "website"
     app_data_field = {
       application_tracking_enabled = {
-        "@template" = "{{context.device.adTrackingEnabled}}"
+        "@path" = "$.context.device.adTrackingEnabled"
       }
       carrier = {
-        "@template" = "{{context.network.carrier}}"
+        "@path" = "$.context.network.carrier"
       }
       density = {
-        "@template" = "{{context.screen.density}}"
+        "@path" = "$.context.screen.density"
       }
       deviceName = {
-        "@template" = "{{context.device.model}}"
+        "@path" = "$.context.device.model"
       }
       deviceTimezone = {
-        "@template" = "{{context.timezone}}"
+        "@path" = "$.context.timezone"
       }
       height = {
-        "@template" = "{{context.screen.height}}"
+        "@path" = "$.context.screen.height"
       }
       locale = {
-        "@template" = "{{context.locale}}"
+        "@path" = "$.context.locale"
       }
       longVersion = {
-        "@template" = "{{context.app.version}}"
+        "@path" = "$.context.app.version"
       }
       osVersion = {
-        "@template" = "{{context.os.version}}"
+        "@path" = "$.context.os.version"
       }
       packageName = {
-        "@template" = "{{context.app.namespace}}"
+        "@path" = "$.context.app.namespace"
       }
       width = {
-        "@template" = "{{context.screen.width}}"
+        "@path" = "$.context.screen.width"
       }
     }
     contents = {
       "@arrayPath" = [{
-        "@template" = "{{properties.products}}"
+        "@path" = "$.properties.products"
         }, {
         id = {
-          "@template" = "{{product_id}}"
+          "@path" = "$.product_id"
         }
         item_price = {
-          "@template" = "{{price}}"
+          "@path" = "$.price"
         }
         quantity = {
-          "@template" = "{{quantity}}"
+          "@path" = "$.quantity"
         }
       }]
     }
     currency = {
-      "@template" = "{{properties.currency}}"
+      "@path" = "$.properties.currency"
     }
     event_id = {
-      "@template" = "{{properties.order_id}}"
+      "@path" = "$.properties.order_id"
     }
     event_source_url = {
-      "@template" = "{{context.page.url}}"
+      "@path" = "$.context.page.url"
     }
     event_time = {
-      "@template" = "{{timestamp}}"
+      "@path" = "$.timestamp"
     }
     test_event_code = "TEST82273"
     user_data = {
       city = {
-        "@template" = "{{context.traits.address.city}}"
+        "@path" = "$.context.traits.address.city"
       }
       client_ip_address = {
-        "@template" = "{{context.ip}}"
+        "@path" = "$.context.ip"
       }
       client_user_agent = {
-        "@template" = "{{context.userAgent}}"
+        "@path" = "$.context.userAgent"
       }
       dateOfBirth = {
-        "@template" = "{{context.traits.birthday}}"
+        "@path" = "$.context.traits.birthday"
       }
       email = {
-        "@template" = "{{context.traits.email}}"
+        "@path" = "$.context.traits.email"
       }
       externalId = {
         "@if" = {
           else = {
-            "@template" = "{{anonymousId}}"
+            "@path" = "$.anonymousId"
           }
           exists = {
-            "@template" = "{{userId}}"
+            "@path" = "$.userId"
           }
           then = {
-            "@template" = "{{userId}}"
+            "@path" = "$.userId"
           }
         }
       }
       fbc = {
-        "@template" = "{{properties.fbc}}"
+        "@path" = "$.properties.fbc"
       }
       fbp = {
-        "@template" = "{{properties.fbp}}"
+        "@path" = "$.properties.fbp"
       }
       firstName = {
-        "@template" = "{{context.traits.firstName}}"
+        "@path" = "$.context.traits.firstName"
       }
       lastName = {
-        "@template" = "{{context.traits.lastName}}"
+        "@path" = "$.context.traits.lastName"
       }
       phone = {
-        "@template" = "{{context.traits.phone}}"
+        "@path" = "$.context.traits.phone"
       }
       state = {
-        "@template" = "{{context.traits.address.state}}"
+        "@path" = "$.context.traits.address.state"
       }
       zip = {
-        "@template" = "{{context.traits.address.postalCode}}"
+        "@path" = "$.context.traits.address.postalCode"
       }
     }
     value = {
-      "@template" = "{{properties.revenue}}"
+      "@path" = "$.properties.revenue"
     }
   })
   trigger = "type = \"track\" and event = \"Order Completed\""
