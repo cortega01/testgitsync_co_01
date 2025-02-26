@@ -130,5 +130,5 @@ resource "segment_destination_subscription" "id-66ea2abcb10a85d855031ad2_31VphjH
       "@path" = "$.properties.revenue"
     }
   })
-  trigger = "type = \"track\" and event = \"Order Completed\""
+  trigger = "type = \"track\" and event = \"Enhanced Order Completed\""
 }
