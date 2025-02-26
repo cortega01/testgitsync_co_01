@@ -67,7 +67,6 @@ resource "segment_destination_subscription" "id-66ea2abcb10a85d855031ad2_sdPVSYb
     event_time = {
       "@path" = "$.timestamp"
     }
-    test_event_code = "TEST82273"
     user_data = {
       city = {
         "@path" = "$.context.traits.address.city"
