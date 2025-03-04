@@ -4,7 +4,7 @@ import {
 }
 
 resource "segment_destination" "id-67c67a88f567d4f483020320" {
-  enabled = false
+  enabled = true
   metadata = {
     contacts          = null
     id                = "5850d8b680412f644ff55df2"
@@ -15,7 +15,7 @@ resource "segment_destination" "id-67c67a88f567d4f483020320" {
   name = "Repeater from HTTP API 1 Development"
   settings = jsonencode({
     endpoint   = "https://api.segment.io"
-    repeatKeys = []
+    repeatKeys = ["vt2TklHUvEpGqq5zqY2fkP4aNIG61L8d"]
   })
   source_id = "hbHTwZCSYHvegNutaqq1wc"
 }
