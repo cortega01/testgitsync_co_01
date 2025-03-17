@@ -56,6 +56,11 @@ resource "segment_destination_subscription" "id-66cd2f65ca46e7cc406c38ef_bQ2QN9Z
     phone = {
       "@path" = "$.traits.phone"
     }
+    properties = {
+      net_rev = {
+        "@template" = "{{__segment_entities.cortega-dev.sku.NET_REVENUE}}"
+      }
+    }
     state = {
       "@path" = "$.traits.address.state"
     }
@@ -76,5 +81,5 @@ resource "segment_destination_subscription" "id-66cd2f65ca46e7cc406c38ef_bQ2QN9Z
       }
     }
   })
-  trigger = "type = \"identify\""
+  trigger = "type = \"track\" and event = \"Enhanced Order Completed\""
 }
