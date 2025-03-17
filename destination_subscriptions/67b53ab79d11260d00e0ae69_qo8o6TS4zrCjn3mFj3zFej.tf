@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-67b53ab79d11260d00e0ae69_qo8o6TS4zrCjn3mFj3zFej" {
   action_id            = "vE7Gf9yobj2gTuMBhwmg7g"
   destination_id       = "67b53ab79d11260d00e0ae69"
-  enabled              = true
+  enabled              = false
   model_id             = null
   name                 = "Order Completed Calls"
   reverse_etl_schedule = null
