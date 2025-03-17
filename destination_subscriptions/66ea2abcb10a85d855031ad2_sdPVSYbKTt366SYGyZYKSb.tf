@@ -51,15 +51,15 @@ resource "segment_destination_subscription" "id-66ea2abcb10a85d855031ad2_sdPVSYb
       }
     }
     custom_data = {
-      enhanced_prop = {
-        "@path" = "$.properties.enhanced_prop"
+      net_rev = {
+        "@template" = "{{__segment_entities.cortega-dev.sku.NET_REVENUE}}"
       }
     }
     event_id = {
       "@path" = "$.properties.order_id"
     }
     event_name = {
-      "@template" = "{{event}} TEST82273"
+      "@template" = "{{event}} TEST83532"
     }
     event_source_url = {
       "@path" = "$.context.page.url"
@@ -67,6 +67,7 @@ resource "segment_destination_subscription" "id-66ea2abcb10a85d855031ad2_sdPVSYb
     event_time = {
       "@path" = "$.timestamp"
     }
+    test_event_code = "TEST83532"
     user_data = {
       city = {
         "@path" = "$.context.traits.address.city"
