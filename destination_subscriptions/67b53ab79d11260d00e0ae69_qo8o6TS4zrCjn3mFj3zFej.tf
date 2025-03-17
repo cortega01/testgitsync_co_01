@@ -24,14 +24,25 @@ resource "segment_destination_subscription" "id-67b53ab79d11260d00e0ae69_qo8o6TS
       "@path" = "$.userId"
     }
     products = {
-      "@path" = "$.properties.products"
+      "@arrayPath" = [{
+        "@path" = "$."
+        }, {
+        price = {
+          "@path" = "$.properties.price"
+        }
+        product_id = {
+          "@path" = "$.properties.product_id"
+        }
+      }]
     }
     properties = {
-      "@path" = "$.properties"
+      net_rev = {
+        "@template" = "{{__segment_entities.cortega-dev.sku.NET_REVENUE}}"
+      }
     }
     time = {
       "@path" = "$.receivedAt"
     }
   })
-  trigger = "event = \"Order Completed\""
+  trigger = "event = \"Enhanced Order Completed\""
 }
