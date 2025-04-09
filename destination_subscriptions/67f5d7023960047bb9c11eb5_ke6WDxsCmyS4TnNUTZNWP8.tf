@@ -67,17 +67,7 @@ resource "segment_destination_subscription" "id-67f5d7023960047bb9c11eb5_ke6WDxs
       "@path" = "$.context.device.type"
     }
     distinct_id = {
-      "@if" = {
-        else = {
-          "@path" = "$.anonymousId"
-        }
-        exists = {
-          "@path" = "$.userId"
-        }
-        then = {
-          "@path" = "$.userId"
-        }
-      }
+      "@path" = "$.userId"
     }
     enable_batching = true
     event = {
