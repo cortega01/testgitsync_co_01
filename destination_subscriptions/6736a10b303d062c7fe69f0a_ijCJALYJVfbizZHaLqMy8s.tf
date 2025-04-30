@@ -43,5 +43,5 @@ resource "segment_destination_subscription" "id-6736a10b303d062c7fe69f0a_ijCJALY
       "@path" = "$.receivedAt"
     }
   })
-  trigger = "type = \"track\" and event != \"Order Completed\""
+  trigger = "type = \"track\""
 }
