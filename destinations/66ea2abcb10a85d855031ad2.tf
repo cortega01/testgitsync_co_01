@@ -18,7 +18,7 @@ resource "segment_destination" "id-66ea2abcb10a85d855031ad2" {
       configId = "66ea2abcb10a85d855031ad2"
     }
     pixelId       = "545342626773734"
-    testEventCode = "TEST65815"
+    testEventCode = ""
   })
   source_id = "hbHTwZCSYHvegNutaqq1wc"
 }
