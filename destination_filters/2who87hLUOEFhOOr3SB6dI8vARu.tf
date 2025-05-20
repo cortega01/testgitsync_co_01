@@ -15,7 +15,7 @@ resource "segment_destination_filter" "id-681980f9e95517d3571df0d5_2who87hLUOEFh
   description    = null
   destination_id = "681980f9e95517d3571df0d5"
   enabled        = true
-  if             = "event != \"Button Clicked\" and properties.event_category = \"profiles\""
+  if             = "!(event = \"Button Clicked\" and properties.event_category = \"profiles\")"
   source_id      = "oJPmNYZu1jHNgmgk6q2iuf"
   title          = "Allowlist - 1"
 }
