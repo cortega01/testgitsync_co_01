@@ -16,7 +16,7 @@ resource "segment_destination_subscription" "id-681980f9e95517d3571df0d5_ompNhL5
       "@path" = "$."
     }
     method = "POST"
-    url    = "https://webhook.site/c25b52c0-60fd-43d1-a535-e1198e6778e5"
+    url    = "https://webhook.site/815b8d79-6737-43fd-9e64-3f9d253a8bb3"
   })
   trigger = "type = \"track\""
 }
