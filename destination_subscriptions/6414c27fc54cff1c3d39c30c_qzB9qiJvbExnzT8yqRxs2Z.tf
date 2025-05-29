@@ -11,6 +11,7 @@ resource "segment_destination_subscription" "id-6414c27fc54cff1c3d39c30c_qzB9qiJ
   name                 = "Send"
   reverse_etl_schedule = null
   settings = jsonencode({
+    batch_keys = ["url", "method", "headers"]
     batch_size = 0
     data = {
       "@path" = "$."
