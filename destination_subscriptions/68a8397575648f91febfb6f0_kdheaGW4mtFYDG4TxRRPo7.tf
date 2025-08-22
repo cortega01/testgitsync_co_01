@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-68a8397575648f91febfb6f0_kdheaGW4mtFYDG4TxRRPo7" {
   action_id      = "oiFvX4YXwyaPVysi1t7mtz"
   destination_id = "68a8397575648f91febfb6f0"
-  enabled        = false
+  enabled        = true
   model_id       = "99ajX6rZiHagThqHiS8z62"
   name           = "Send Track (DELETED)"
   reverse_etl_schedule = {
