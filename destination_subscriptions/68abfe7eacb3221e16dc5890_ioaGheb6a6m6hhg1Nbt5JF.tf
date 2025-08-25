@@ -36,6 +36,7 @@ resource "segment_destination_subscription" "id-68abfe7eacb3221e16dc5890_ioaGheb
         "@path" = "$.properties.CONTACT_ID"
       }
       retl_test_null = null
+      state          = null
     }
     user_id = {
       "@path" = "$.__segment_id"
