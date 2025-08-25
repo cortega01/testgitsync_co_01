@@ -24,6 +24,11 @@ resource "segment_destination_subscription" "id-68a8397575648f91febfb6f0_kdheaGW
     properties = {
       propertyNum = 1
     }
+    traits = {
+      CONTACT_ID_TEST_TRAIT = {
+        "@path" = "$.properties.CONTACT_ID"
+      }
+    }
     user_id = {
       "@path" = "$.properties.CONTACT_ID"
     }
