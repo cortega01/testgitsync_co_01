@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-68abfe7eacb3221e16dc5890_ioaGheb6a6m6hhg1Nbt5JF" {
   action_id      = "vm2tNA5U1zxUusQkdC4D7Z"
   destination_id = "68abfe7eacb3221e16dc5890"
-  enabled        = false
+  enabled        = true
   model_id       = "99ajX6rZiHagThqHiS8z62"
   name           = "Send Identify"
   reverse_etl_schedule = {
