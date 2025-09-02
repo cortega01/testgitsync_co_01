@@ -4,7 +4,7 @@ import {
 }
 
 resource "segment_destination" "id-68b6b7a2c6f5eec825329573" {
-  enabled = false
+  enabled = true
   metadata = {
     contacts = [
       {
@@ -19,6 +19,12 @@ resource "segment_destination" "id-68b6b7a2c6f5eec825329573" {
   settings = jsonencode({
     conversionTrackingId = ""
     customerId           = ""
+    dynamicAuthSettings = {
+      configId = "68b6b7a2c6f5eec825329573"
+      oauth = {
+        type = "noAuth"
+      }
+    }
   })
   source_id = "7U1pz1W1ESiasVbLSGWWzT"
 }
