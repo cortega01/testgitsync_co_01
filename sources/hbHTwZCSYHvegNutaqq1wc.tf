@@ -10,6 +10,6 @@ resource "segment_source" "id-hbHTwZCSYHvegNutaqq1wc" {
     id = "iUM16Md8P2"
   }
   name     = "Demo HTTP API 1 (Development)"
-  settings = "{}"
+  settings = jsonencode({})
   slug     = "demo_http_api_1_development"
 }
