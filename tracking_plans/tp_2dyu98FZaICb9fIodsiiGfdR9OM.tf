@@ -59,6 +59,39 @@ resource "segment_tracking_plan" "id-tp_2dyu98FZaICb9fIodsiiGfdR9OM" {
     {
       json_schema = jsonencode({
         "$schema" = "http://json-schema.org/draft-07/schema#"
+        if = {
+          properties = {
+            type = {
+              pattern = "screen"
+              type    = "string"
+            }
+          }
+          type = "object"
+        }
+        properties = {
+          context    = {}
+          properties = {}
+          traits     = {}
+        }
+        then = {
+          oneOf = [{
+            properties = {
+              name = {
+                pattern = "^(Home|Product\\s{1}Page)$"
+                type    = "string"
+              }
+            }
+          }]
+        }
+        type = "object"
+      })
+      key     = null
+      type    = "COMMON"
+      version = 1
+    },
+    {
+      json_schema = jsonencode({
+        "$schema" = "http://json-schema.org/draft-07/schema#"
         properties = {
           context = {}
           properties = {
@@ -90,6 +123,31 @@ resource "segment_tracking_plan" "id-tp_2dyu98FZaICb9fIodsiiGfdR9OM" {
             type = "object"
           }
           traits = {
+            properties = {
+              asdfasf = {
+                description = ""
+                id          = "/properties/traits/properties/asdfasf"
+                type        = "string"
+              }
+            }
+            type = "object"
+          }
+        }
+        type = "object"
+      })
+      key     = null
+      type    = "IDENTIFY"
+      version = 1
+    },
+    {
+      json_schema = jsonencode({
+        "$schema" = "http://json-schema.org/draft-07/schema#"
+        properties = {
+          context = {}
+          properties = {
+            type = "object"
+          }
+          traits = {
             type = "object"
           }
         }
@@ -97,29 +155,6 @@ resource "segment_tracking_plan" "id-tp_2dyu98FZaICb9fIodsiiGfdR9OM" {
       })
       key     = "Button 2 Clicked"
       type    = "TRACK"
-      version = 1
-    },
-    {
-      json_schema = jsonencode({
-        "$schema" = "http://json-schema.org/draft-07/schema#"
-        properties = {
-          context    = {}
-          properties = {}
-          traits = {
-            properties = {
-              AllowGroupOrIdentify = {
-                type = "string"
-              }
-            }
-            required = ["AllowGroupOrIdentify"]
-            type     = "object"
-          }
-        }
-        required = ["traits"]
-        type     = "object"
-      })
-      key     = null
-      type    = "COMMON"
       version = 1
     },
   ]
