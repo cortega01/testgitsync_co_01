@@ -56,5 +56,5 @@ resource "segment_destination_subscription" "id-68ddf3becd16654b5f43b37a_vmVvXfG
       "@path" = "$.traits.phone"
     }
   })
-  trigger = "type = \"identify\""
+  trigger = "type = \"identify\" and userId != null"
 }
