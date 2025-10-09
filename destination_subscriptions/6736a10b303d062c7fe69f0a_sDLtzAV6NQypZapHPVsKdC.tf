@@ -30,9 +30,6 @@ resource "segment_destination_subscription" "id-6736a10b303d062c7fe69f0a_sDLtzAV
     custom_attributes = {
       "@path" = "$.traits"
     }
-    email = {
-      "@path" = "$.traits.email"
-    }
     enable_batching = true
     external_id = {
       "@path" = "$.userId"
