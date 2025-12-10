@@ -7,11 +7,13 @@ resource "segment_destination_filter" "id-69322a7307f444425e48ddb1_36dJpmC87xs8A
   actions = [
     {
       fields = jsonencode({
+        ""         = ["channel", "properties", "event", "type", "messageId", "timestamp", "context", "integrations", "receivedAt", "userId", "projectId"]
+        context    = ["library"]
         properties = ["prop_01", "prop_02"]
       })
       path    = null
       percent = null
-      type    = "ALLOW_PROPERTIES"
+      type    = "DROP_PROPERTIES"
     },
   ]
   description    = "Only allow event properties if they are specified in the query"
