@@ -11,7 +11,7 @@ resource "segment_destination_filter" "id-69322a7307f444425e48ddb1_36dIBC9j9WzkC
       })
       path    = null
       percent = null
-      type    = "ALLOW_PROPERTIES"
+      type    = "DROP_PROPERTIES"
     },
   ]
   description    = "Only allow event properties if they are specified in the query"
