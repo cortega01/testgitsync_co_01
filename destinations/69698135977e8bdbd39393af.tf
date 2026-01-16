@@ -17,9 +17,15 @@ resource "segment_destination" "id-69698135977e8bdbd39393af" {
     region_endpoints  = ["US"]
     supported_regions = ["us-west-2", "eu-west-1"]
   }
-  name = "LinkedIn Audiences (2)"
+  name = "LinkedIn Audiences 2"
   settings = jsonencode({
-    ad_account_id              = ""
+    ad_account_id = "12"
+    dynamicAuthSettings = {
+      configId = "69698135977e8bdbd39393af"
+      oauth = {
+        type = "noAuth"
+      }
+    }
     send_email                 = true
     send_google_advertising_id = true
   })
