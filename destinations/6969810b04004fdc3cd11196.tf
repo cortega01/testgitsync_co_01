@@ -19,7 +19,7 @@ resource "segment_destination" "id-6969810b04004fdc3cd11196" {
   }
   name = "LinkedIn Audiences 1"
   settings = jsonencode({
-    ad_account_id = ""
+    ad_account_id = "1"
     dynamicAuthSettings = {
       configId = "6969810b04004fdc3cd11196"
       oauth = {
