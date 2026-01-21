@@ -16,7 +16,7 @@ resource "segment_destination" "id-697025c606c72c86f605fee9" {
   settings = jsonencode({
     androidAppID         = ""
     appleAppID           = ""
-    appsFlyerDevKey      = ""
+    appsFlyerDevKey      = "••••••••••156a"
     appsFlyerS2SToken    = ""
     canOmitAppsFlyerId   = false
     fallbackToIdfv       = false
