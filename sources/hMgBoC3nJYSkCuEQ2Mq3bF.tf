@@ -9,7 +9,12 @@ resource "segment_source" "id-hMgBoC3nJYSkCuEQ2Mq3bF" {
   metadata = {
     id = "BQp3zGUgjV"
   }
-  name     = "Snowflake Pristine LINKED"
-  settings = "{\"account\":\"ecb63470.prod3.us-west-2\",\"database\":\"LINKED_WORKSHOP\",\"username\":\"LINKED\",\"warehouse\":\"SEGMENT_WAREHOUSE\"}"
-  slug     = "snowflake_pristine_linked"
+  name = "Snowflake Pristine LINKED"
+  settings = jsonencode({
+    account   = "ZS53153-SEGMENT_PARTNER"
+    database  = "CORTEGA_SANDBOX"
+    username  = "CORTEGA"
+    warehouse = "SEGMENT_WAREHOUSE"
+  })
+  slug = "snowflake_pristine_linked"
 }
