@@ -9,7 +9,7 @@ resource "segment_source" "id-hMgBoC3nJYSkCuEQ2Mq3bF" {
   metadata = {
     id = "BQp3zGUgjV"
   }
-  name = "Snowflake Pristine LINKED"
+  name = "Snowflake SEGMENT_PARTNER"
   settings = jsonencode({
     account   = "ZS53153-SEGMENT_PARTNER"
     database  = "CORTEGA_SANDBOX"
