@@ -4,7 +4,7 @@ import {
 }
 
 resource "segment_destination" "id-64dbeabddd6b93253b2adb54" {
-  enabled = true
+  enabled = false
   metadata = {
     contacts = [
       {
@@ -15,7 +15,9 @@ resource "segment_destination" "id-64dbeabddd6b93253b2adb54" {
     region_endpoints  = null
     supported_regions = null
   }
-  name      = "Split Instance #1"
-  settings  = "{\"apiKey\":\"••••••••••qh1k\"}"
+  name = "Split Instance #1"
+  settings = jsonencode({
+    apiKey = "••••••••••qh1k"
+  })
   source_id = "6PtA2kfhX5eMPqPQjjMgTx"
 }
