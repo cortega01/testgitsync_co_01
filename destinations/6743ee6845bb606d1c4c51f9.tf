@@ -4,7 +4,7 @@ import {
 }
 
 resource "segment_destination" "id-6743ee6845bb606d1c4c51f9" {
-  enabled = true
+  enabled = false
   metadata = {
     contacts          = null
     id                = "650bdf1a62fb34ef0a8058e1"
@@ -12,7 +12,15 @@ resource "segment_destination" "id-6743ee6845bb606d1c4c51f9" {
     region_endpoints  = null
     supported_regions = ["us-west-2", "eu-west-1"]
   }
-  name      = "Klaviyo Actions Test 1"
-  settings  = "{\"api_key\":\"••••••••••dbbd\"}"
+  name = "Klaviyo Actions Test 1"
+  settings = jsonencode({
+    api_key = "••••••••••dbbd"
+    dynamicAuthSettings = {
+      configId = "6743ee6845bb606d1c4c51f9"
+      oauth = {
+        type = "noAuth"
+      }
+    }
+  })
   source_id = "6PtA2kfhX5eMPqPQjjMgTx"
 }
