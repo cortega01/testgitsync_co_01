@@ -17,7 +17,7 @@ resource "segment_destination_subscription" "id-69801c08326ccdb872d1aaf5_jJRoej7
     }
     enable_batching = false
     headers = {
-      Authorization = "Basic dnQyVGtsSFV2RXBHcXE1enFZMmZrUDRhTklHNjFMOGQ6"
+      Authorization = "Basic dnQyVGtsSFV2RXBHcXE1enFZMmZrUDRhTklHNjFMOGQ="
       Content-Type  = "application/json"
     }
     method = "POST"
