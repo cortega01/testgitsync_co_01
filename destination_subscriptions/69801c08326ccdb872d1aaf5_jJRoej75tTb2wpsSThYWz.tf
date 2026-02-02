@@ -23,5 +23,5 @@ resource "segment_destination_subscription" "id-69801c08326ccdb872d1aaf5_jJRoej7
     method = "POST"
     url    = "https://api.segment.io/v1/track"
   })
-  trigger = "type = \"track\" and properties.store = \"consumer\""
+  trigger = "type = \"track\""
 }
