@@ -4,7 +4,7 @@ import {
 }
 
 resource "segment_destination" "id-63a2385a7e31fbd982cd7188" {
-  enabled = true
+  enabled = false
   metadata = {
     contacts = [
       {
@@ -15,7 +15,17 @@ resource "segment_destination" "id-63a2385a7e31fbd982cd7188" {
     region_endpoints  = null
     supported_regions = null
   }
-  name      = "Marketo v2 Test 1"
-  settings  = "{\"accountId\":\"1234\",\"anonymousActivity\":false,\"beta\":false,\"clientId\":\"12345\",\"clientSecret\":\"••••••••••2355\",\"events\":[],\"marketoFormId\":\"\",\"marketoHostUrl\":\"\",\"traits\":[]}"
+  name = "Marketo v2 Test 1"
+  settings = jsonencode({
+    accountId         = "1234"
+    anonymousActivity = false
+    beta              = false
+    clientId          = "12345"
+    clientSecret      = "••••••••••2355"
+    events            = []
+    marketoFormId     = ""
+    marketoHostUrl    = ""
+    traits            = []
+  })
   source_id = "f9XSryLD3S4oTyquhekAit"
 }
