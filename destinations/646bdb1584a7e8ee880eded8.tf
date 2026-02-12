@@ -4,7 +4,7 @@ import {
 }
 
 resource "segment_destination" "id-646bdb1584a7e8ee880eded8" {
-  enabled = true
+  enabled = false
   metadata = {
     contacts = [
       {
@@ -15,7 +15,13 @@ resource "segment_destination" "id-646bdb1584a7e8ee880eded8" {
     region_endpoints  = ["EU", "US"]
     supported_regions = null
   }
-  name      = "Iterable Test #1"
-  settings  = "{\"apiKey\":\"••••••••••8c56\",\"mapAllPagesToSingleEventName\":true,\"trackAllPages\":false,\"trackCategorizedPages\":true,\"trackNamedPages\":true}"
+  name = "Iterable Test #1"
+  settings = jsonencode({
+    apiKey                       = "••••••••••8c56"
+    mapAllPagesToSingleEventName = true
+    trackAllPages                = false
+    trackCategorizedPages        = true
+    trackNamedPages              = true
+  })
   source_id = "f9XSryLD3S4oTyquhekAit"
 }
