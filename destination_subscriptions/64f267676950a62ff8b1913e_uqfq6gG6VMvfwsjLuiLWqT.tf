@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-64f267676950a62ff8b1913e_uqfq6gG6VMvfwsjLuiLWqT" {
   action_id            = "hhcbf2MTRHEXqkz9AipW4V"
   destination_id       = "64f267676950a62ff8b1913e"
-  enabled              = false
+  enabled              = true
   model_id             = null
   name                 = "Set Configuration Fields"
   reverse_etl_schedule = null
