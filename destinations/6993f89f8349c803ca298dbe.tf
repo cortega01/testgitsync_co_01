@@ -14,7 +14,7 @@ resource "segment_destination" "id-6993f89f8349c803ca298dbe" {
   }
   name = "Google Tag Manager Instance #1"
   settings = jsonencode({
-    containerId           = ""
+    containerId           = "GTM-M7S49GDJ"
     environment           = ""
     fullURLpath           = ""
     trackAllPages         = false
