@@ -17,7 +17,7 @@ resource "segment_destination" "id-6993ccf655e492185deebfbc" {
     containerId           = "GTM-KCMM53GZ"
     environment           = ""
     fullURLpath           = ""
-    trackAllPages         = false
+    trackAllPages         = true
     trackCategorizedPages = false
     trackNamedPages       = false
   })
