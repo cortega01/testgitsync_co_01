@@ -4,7 +4,7 @@ import {
 }
 
 resource "segment_destination" "id-6270de8302678826f5ff3015" {
-  enabled = true
+  enabled = false
   metadata = {
     contacts = [
       {
@@ -15,7 +15,17 @@ resource "segment_destination" "id-6270de8302678826f5ff3015" {
     region_endpoints  = ["US"]
     supported_regions = ["us-west-2", "eu-west-1"]
   }
-  name      = "cortega-ga4-test-dev"
-  settings  = "{\"apiSecret\":\"••••••••••oQag\",\"firebaseAppId\":\"\",\"measurementId\":\"G-QPZQ45K2KH\"}"
+  name = "cortega-ga4-test-dev"
+  settings = jsonencode({
+    apiSecret = "••••••••••oQag"
+    dynamicAuthSettings = {
+      configId = "6270de8302678826f5ff3015"
+      oauth = {
+        type = "noAuth"
+      }
+    }
+    firebaseAppId = ""
+    measurementId = "G-QPZQ45K2KH"
+  })
   source_id = "f9XSryLD3S4oTyquhekAit"
 }
