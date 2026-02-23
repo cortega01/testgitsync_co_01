@@ -16,7 +16,7 @@ resource "segment_destination" "id-6993ccf655e492185deebfbc" {
   settings = jsonencode({
     containerId           = "GTM-T52BGBQ7"
     environment           = ""
-    fullURLpath           = ""
+    fullURLpath           = "http://www.googletagmanager.com/gtm.js"
     trackAllPages         = true
     trackCategorizedPages = false
     trackNamedPages       = false
