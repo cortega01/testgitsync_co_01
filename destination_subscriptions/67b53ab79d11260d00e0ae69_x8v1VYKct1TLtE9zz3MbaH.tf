@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-67b53ab79d11260d00e0ae69_x8v1VYKct1TLtE9zz3MbaH" {
   action_id            = "3pnc4QJvUjWGi2bp6EnDt"
   destination_id       = "67b53ab79d11260d00e0ae69"
-  enabled              = true
+  enabled              = false
   model_id             = null
   name                 = "Track Calls"
   reverse_etl_schedule = null
