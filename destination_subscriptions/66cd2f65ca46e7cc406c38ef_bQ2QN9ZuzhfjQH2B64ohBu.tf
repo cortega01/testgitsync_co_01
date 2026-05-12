@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-66cd2f65ca46e7cc406c38ef_bQ2QN9ZuzhfjQH2B64ohBu" {
   action_id            = "v3BPw5E3WcwKH4nngqta2i"
   destination_id       = "66cd2f65ca46e7cc406c38ef"
-  enabled              = true
+  enabled              = false
   model_id             = null
   name                 = "Upsert Contact (Copy)"
   reverse_etl_schedule = null
