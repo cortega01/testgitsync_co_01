@@ -4,11 +4,12 @@ import {
 }
 
 resource "segment_destination_subscription" "id-67b53ab79d11260d00e0ae69_465vmZAtKrxCQM5q536dju" {
-  action_id      = "2P24zUSAL8BUpyGYNGmD7M"
-  destination_id = "67b53ab79d11260d00e0ae69"
-  enabled        = true
-  model_id       = null
-  name           = "Newsletter Subscription | Brand 1"
+  action_id            = "2P24zUSAL8BUpyGYNGmD7M"
+  destination_id       = "67b53ab79d11260d00e0ae69"
+  enabled              = false
+  model_id             = null
+  name                 = "Newsletter Subscription | Brand 1"
+  reverse_etl_schedule = null
   settings = jsonencode({
     _update_existing_only = false
     batch_size            = 75
@@ -18,10 +19,10 @@ resource "segment_destination_subscription" "id-67b53ab79d11260d00e0ae69_465vmZA
           "@path" = "$.traits.braze_id"
         }
         exists = {
-          "@template" = "{{integrations.Braze Cloud Mode (Actions).braze_id}}"
+          "@path" = "$.integrations.Braze Cloud Mode (Actions).braze_id"
         }
         then = {
-          "@template" = "{{integrations.Braze Cloud Mode (Actions).braze_id}}"
+          "@path" = "$.integrations.Braze Cloud Mode (Actions).braze_id"
         }
       }
     }
