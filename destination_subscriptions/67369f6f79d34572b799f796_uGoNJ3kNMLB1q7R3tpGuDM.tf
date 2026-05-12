@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-67369f6f79d34572b799f796_uGoNJ3kNMLB1q7R3tpGuDM" {
   action_id            = "3pnc4QJvUjWGi2bp6EnDt"
   destination_id       = "67369f6f79d34572b799f796"
-  enabled              = true
+  enabled              = false
   model_id             = null
   name                 = "LE|Track|Product Added to Wishlist"
   reverse_etl_schedule = null
