@@ -19,5 +19,5 @@ resource "segment_destination_subscription" "id-69801c08326ccdb872d1aaf5_mMX7y2q
     method          = "POST"
     url             = "https://webhook.site/118f2024-9928-4b9e-a613-dc94171b9258"
   })
-  trigger = "event = \"Test Event\""
+  trigger = "event = \"Transformed Event\""
 }
