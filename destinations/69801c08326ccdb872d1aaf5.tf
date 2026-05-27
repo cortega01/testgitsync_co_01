@@ -12,7 +12,7 @@ resource "segment_destination" "id-69801c08326ccdb872d1aaf5" {
     region_endpoints  = ["US"]
     supported_regions = ["us-west-2", "eu-west-1"]
   }
-  name = "Webhook (Actions)"
+  name = "Eloqua Test - Webhook (Actions)"
   settings = jsonencode({
     dynamicAuthSettings = {
       configId = "69801c08326ccdb872d1aaf5"
