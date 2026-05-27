@@ -18,5 +18,5 @@ resource "segment_destination_subscription" "id-6a02a28005d26703b92575e5_x9Seymm
     method = "POST"
     url    = "https://webhook.site/118f2024-9928-4b9e-a613-dc94171b9258"
   })
-  trigger = "event = \"QTAC Full Application Updated\" and type = \"track\""
+  trigger = "type = \"track\""
 }
