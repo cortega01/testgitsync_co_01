@@ -21,7 +21,7 @@ resource "segment_destination" "id-6a2244897fb5e918058344a9" {
     mappedIdentifyTraits = {}
     password             = "••••••••••2135"
     sendGroup            = false
-    siteId               = ""
+    siteId               = "asdfaw13"
     username             = ""
   })
   source_id = "7U1pz1W1ESiasVbLSGWWzT"
