@@ -19,7 +19,7 @@ resource "segment_destination" "id-6a2244897fb5e918058344a9" {
     mappedEvents         = {}
     mappedGroupTraits    = {}
     mappedIdentifyTraits = {}
-    password             = ""
+    password             = "••••••••••2135"
     sendGroup            = false
     siteId               = ""
     username             = ""
