@@ -1,0 +1,28 @@
+import {
+  to = segment_destination.id-6a2244897fb5e918058344a9
+  id = "6a2244897fb5e918058344a9"
+}
+
+resource "segment_destination" "id-6a2244897fb5e918058344a9" {
+  enabled = false
+  metadata = {
+    contacts          = null
+    id                = "54521fd525e721e32a72eeac"
+    partner_owned     = false
+    region_endpoints  = null
+    supported_regions = null
+  }
+  name = "Eloqua"
+  settings = jsonencode({
+    companyName          = ""
+    createContactOnTrack = false
+    mappedEvents         = {}
+    mappedGroupTraits    = {}
+    mappedIdentifyTraits = {}
+    password             = ""
+    sendGroup            = false
+    siteId               = ""
+    username             = ""
+  })
+  source_id = "7U1pz1W1ESiasVbLSGWWzT"
+}
