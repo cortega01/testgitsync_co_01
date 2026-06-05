@@ -22,7 +22,7 @@ resource "segment_destination" "id-6a2244897fb5e918058344a9" {
     password             = "••••••••••2135"
     sendGroup            = false
     siteId               = "asdfaw13"
-    username             = ""
+    username             = "baet1"
   })
   source_id = "7U1pz1W1ESiasVbLSGWWzT"
 }
