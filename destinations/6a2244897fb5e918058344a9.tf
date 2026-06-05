@@ -14,7 +14,7 @@ resource "segment_destination" "id-6a2244897fb5e918058344a9" {
   }
   name = "Eloqua"
   settings = jsonencode({
-    companyName          = ""
+    companyName          = "abcd"
     createContactOnTrack = false
     mappedEvents         = {}
     mappedGroupTraits    = {}
