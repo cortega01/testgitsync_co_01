@@ -15,7 +15,17 @@ resource "segment_destination" "id-62a90f636807654cee166863" {
     region_endpoints  = ["US"]
     supported_regions = ["us-west-2", "eu-west-1"]
   }
-  name      = "GA4 Test1"
-  settings  = "{\"apiSecret\":\"\",\"measurementId\":\"\"}"
+  name = "GA4 Test1"
+  settings = jsonencode({
+    apiSecret = "••••••••••Hj6Q"
+    dynamicAuthSettings = {
+      configId = "62a90f636807654cee166863"
+      oauth = {
+        type = "noAuth"
+      }
+    }
+    firebaseAppId = ""
+    measurementId = "G-QPZQ45K2KH"
+  })
   source_id = "6PtA2kfhX5eMPqPQjjMgTx"
 }
