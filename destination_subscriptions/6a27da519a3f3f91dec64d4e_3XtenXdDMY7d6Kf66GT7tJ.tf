@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-6a27da519a3f3f91dec64d4e_3XtenXdDMY7d6Kf66GT7tJ" {
   action_id      = "tNPRvBDTsfszvJQy6kE9K3"
   destination_id = "6a27da519a3f3f91dec64d4e"
-  enabled        = false
+  enabled        = true
   model_id       = "fCPotxBPWAkEMCg1ATSuLr"
   name           = "Custom Event"
   reverse_etl_schedule = {
