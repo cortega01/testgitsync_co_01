@@ -8,12 +8,10 @@ resource "segment_destination_subscription" "id-6a27e89bb2ec80d608363a3c_rYUaVz2
   destination_id = "6a27e89bb2ec80d608363a3c"
   enabled        = true
   model_id       = "fCPotxBPWAkEMCg1ATSuLr"
-  name           = "Send Track"
+  name           = "insert_function_track_test"
   reverse_etl_schedule = {
-    config = jsonencode({
-      interval = "1h"
-    })
-    strategy = "PERIODIC"
+    config   = null
+    strategy = "MANUAL"
   }
   settings = jsonencode({
     consent = {
