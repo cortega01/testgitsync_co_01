@@ -17,9 +17,15 @@ resource "segment_destination" "id-6a27da519a3f3f91dec64d4e" {
   }
   name = "rETL GA4 Cloud Dev 1"
   settings = jsonencode({
-    apiSecret     = "••••••••••Hj6Q"
+    apiSecret = "••••••••••kV1A"
+    dynamicAuthSettings = {
+      configId = "6a27da519a3f3f91dec64d4e"
+      oauth = {
+        type = "noAuth"
+      }
+    }
     enabled       = false
-    firebaseAppId = ""
+    firebaseAppId = "1:722328798446:ios:2575fbed8dfea57db95fff"
     measurementId = "G-QPZQ45K2KH"
     name          = ""
   })
