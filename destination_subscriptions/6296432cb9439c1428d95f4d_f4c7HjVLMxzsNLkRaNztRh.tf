@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-6296432cb9439c1428d95f4d_f4c7HjVLMxzsNLkRaNztRh" {
   action_id            = "tNPRvBDTsfszvJQy6kE9K3"
   destination_id       = "6296432cb9439c1428d95f4d"
-  enabled              = false
+  enabled              = true
   model_id             = null
   name                 = "Custom Mobile Event - PLTV"
   reverse_etl_schedule = null
