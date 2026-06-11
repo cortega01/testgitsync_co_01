@@ -14,15 +14,12 @@ resource "segment_destination_subscription" "id-6a27da519a3f3f91dec64d4e_3XtenXd
     strategy = "MANUAL"
   }
   settings = jsonencode({
-    name = "event_test"
-    user_id = {
-      "@path" = "$.__segment_id"
-    }
-    user_properties = {
-      trait_name = {
-        "@path" = "$.properties.TRAIT_NAME"
-      }
-      trait_value = {
+    app_instance_id  = "1234567890abcdef1234567890abcdef"
+    data_stream_type = "Mobile App"
+    name             = "total_pltv"
+    params = {
+      currency = "USD"
+      value = {
         "@path" = "$.properties.TRAIT_VALUE"
       }
     }
