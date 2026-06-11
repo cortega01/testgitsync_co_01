@@ -15,7 +15,7 @@ resource "segment_destination" "id-6296432cb9439c1428d95f4d" {
     region_endpoints  = ["US"]
     supported_regions = ["us-west-2", "eu-west-1"]
   }
-  name = "GA 4 Test 1"
+  name = "GA 4 Mobile Test 1"
   settings = jsonencode({
     apiSecret = "••••••••••kV1A"
     dynamicAuthSettings = {
