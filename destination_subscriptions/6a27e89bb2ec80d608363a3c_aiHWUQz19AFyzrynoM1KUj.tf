@@ -10,10 +10,8 @@ resource "segment_destination_subscription" "id-6a27e89bb2ec80d608363a3c_aiHWUQz
   model_id       = "5HWVEVsdJx3EgkNXeeLrAW"
   name           = "Send Track"
   reverse_etl_schedule = {
-    config = jsonencode({
-      interval = "1h"
-    })
-    strategy = "PERIODIC"
+    config   = null
+    strategy = "MANUAL"
   }
   settings = jsonencode({
     consent = {
