@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-6a27e89bb2ec80d608363a3c_rYUaVz2V2J2vA75J2hW6Aa" {
   action_id      = "oiFvX4YXwyaPVysi1t7mtz"
   destination_id = "6a27e89bb2ec80d608363a3c"
-  enabled        = true
+  enabled        = false
   model_id       = "fCPotxBPWAkEMCg1ATSuLr"
   name           = "insert_function_track_test"
   reverse_etl_schedule = {
