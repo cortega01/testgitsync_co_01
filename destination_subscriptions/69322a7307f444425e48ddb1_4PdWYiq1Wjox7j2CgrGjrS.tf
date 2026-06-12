@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-69322a7307f444425e48ddb1_4PdWYiq1Wjox7j2CgrGjrS" {
   action_id            = "nFPnRozhz1mh4Gbx4MLvT5"
   destination_id       = "69322a7307f444425e48ddb1"
-  enabled              = false
+  enabled              = true
   model_id             = null
   name                 = "Send"
   reverse_etl_schedule = null
