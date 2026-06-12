@@ -11,23 +11,19 @@ resource "segment_destination_subscription" "id-6a2bad59bfb003ffde453a82_cP2WiM4
   name                 = "Custom Mobile Event - PLTV"
   reverse_etl_schedule = null
   settings = jsonencode({
-    clientId = {
-      "@if" = {
-        else = {
-          "@path" = "$.anonymousId"
-        }
-        exists = {
-          "@path" = "$.userId"
-        }
-        then = {
-          "@path" = "$.userId"
-        }
-      }
+    app_instance_id = {
+      "@path" = "$.properties.og_firebase_app_instance_id"
     }
-    data_stream_type     = "Web"
+    data_stream_type     = "Mobile App"
     engagement_time_msec = 1
     name = {
       "@path" = "$.event"
+    }
+    params = {
+      currency = "USD"
+      value = {
+        "@path" = "$.properties.indexed_value"
+      }
     }
     timestamp_micros = {
       "@path" = "$.timestamp"
