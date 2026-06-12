@@ -14,9 +14,15 @@ resource "segment_destination" "id-6a27e89bb2ec80d608363a3c" {
   }
   name = "rETL Connections Dev 1"
   settings = jsonencode({
+    dynamicAuthSettings = {
+      configId = "6a27e89bb2ec80d608363a3c"
+      oauth = {
+        type = "noAuth"
+      }
+    }
     enabled          = false
     name             = ""
-    source_write_key = "kpudkdEpzbG6NPABcILOSkyzNj1kaHCJ"
+    source_write_key = "QYJDOpsp3O32WawduknWHICBvQbPiE7z"
   })
   source_id = "jAW8V8J8zbXFEVXhvjCmGn"
 }
