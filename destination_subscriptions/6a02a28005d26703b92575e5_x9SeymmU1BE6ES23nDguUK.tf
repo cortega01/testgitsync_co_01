@@ -15,8 +15,9 @@ resource "segment_destination_subscription" "id-6a02a28005d26703b92575e5_x9Seymm
     data = {
       "@path" = "$."
     }
-    method = "POST"
-    url    = "https://webhooksite.net/118f2024-9928-4b9e-a613-dc94171b9258"
+    enable_batching = false
+    method          = "POST"
+    url             = "https://webhooksite.net/3ec10f14-792a-4c48-900f-cf93dd76af3b"
   })
   trigger = "type = \"track\""
 }
