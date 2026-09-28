@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-6ab9fcdda5740a9e61347ffc_mKk9g2S4EHM2GX1XYsquuz" {
   action_id            = "iLgPGgELNm5SgSVaqztJeJ"
   destination_id       = "6ab9fcdda5740a9e61347ffc"
-  enabled              = false
+  enabled              = true
   model_id             = null
   name                 = "Identify Calls"
   reverse_etl_schedule = null
