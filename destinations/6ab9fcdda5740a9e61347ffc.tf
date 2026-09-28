@@ -4,7 +4,7 @@ import {
 }
 
 resource "segment_destination" "id-6ab9fcdda5740a9e61347ffc" {
-  enabled = false
+  enabled = true
   metadata = {
     id                = "615c7438d93d9b61b1e9e192"
     partner_owned     = true
@@ -13,9 +13,15 @@ resource "segment_destination" "id-6ab9fcdda5740a9e61347ffc" {
   }
   name = "Mixpanel Actions (co-test1)"
   settings = jsonencode({
-    apiRegion    = "US 🇺🇸"
-    apiSecret    = ""
-    projectToken = ""
+    apiRegion = "US 🇺🇸"
+    apiSecret = ""
+    dynamicAuthSettings = {
+      configId = "6ab9fcdda5740a9e61347ffc"
+      oauth = {
+        type = "noAuth"
+      }
+    }
+    projectToken = "00fa2c2ee812b7446c6fabc3938fe8b3"
     sourceName   = ""
     strictMode   = "1"
   })
