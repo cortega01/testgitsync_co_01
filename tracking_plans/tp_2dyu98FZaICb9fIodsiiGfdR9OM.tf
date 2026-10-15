@@ -157,6 +157,24 @@ resource "segment_tracking_plan" "id-tp_2dyu98FZaICb9fIodsiiGfdR9OM" {
       type    = "TRACK"
       version = 1
     },
+    {
+      json_schema = jsonencode({
+        "$schema" = "http://json-schema.org/draft-07/schema#"
+        properties = {
+          context = {}
+          properties = {
+            type = "object"
+          }
+          traits = {
+            type = "object"
+          }
+        }
+        type = "object"
+      })
+      key     = "KYC Approved"
+      type    = "TRACK"
+      version = 1
+    },
   ]
   type = "LIVE"
 }
