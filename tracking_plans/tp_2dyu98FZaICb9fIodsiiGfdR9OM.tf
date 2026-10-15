@@ -9,6 +9,72 @@ resource "segment_tracking_plan" "id-tp_2dyu98FZaICb9fIodsiiGfdR9OM" {
   rules = [
     {
       json_schema = jsonencode({
+        "$schema" = "http://json-schema.org/draft-07/schema#"
+        allOf = [{
+          if = {
+            properties = {
+              type = {
+                const = "track"
+              }
+            }
+          }
+          then = {
+            properties = {
+              properties = {
+                properties = {
+                  platform = {
+                    minLength = 1
+                    type      = "string"
+                  }
+                }
+                required = ["platform"]
+                type     = "object"
+              }
+            }
+            required = ["properties"]
+          }
+          }, {
+          if = {
+            properties = {
+              type = {
+                const = "identify"
+              }
+            }
+          }
+          then = {
+            properties = {
+              context = {
+                properties = {
+                  app = {
+                    properties = {
+                      name = {
+                        minLength = 1
+                        type      = "string"
+                      }
+                    }
+                    required = ["name"]
+                    type     = "object"
+                  }
+                }
+                required = ["app"]
+                type     = "object"
+              }
+            }
+            required = ["context"]
+          }
+        }]
+        properties = {
+          context    = {}
+          properties = {}
+          traits     = {}
+        }
+      })
+      key     = null
+      type    = "COMMON"
+      version = 1
+    },
+    {
+      json_schema = jsonencode({
         "$schema"   = "http://json-schema.org/draft-07/schema#"
         description = "DO NOT EDIT. Event generated to store end users consent preferences for Unify and Twilio Engage."
         properties = {
@@ -54,39 +120,6 @@ resource "segment_tracking_plan" "id-tp_2dyu98FZaICb9fIodsiiGfdR9OM" {
       })
       key     = "Button Clicked"
       type    = "TRACK"
-      version = 1
-    },
-    {
-      json_schema = jsonencode({
-        "$schema" = "http://json-schema.org/draft-07/schema#"
-        if = {
-          properties = {
-            type = {
-              pattern = "screen"
-              type    = "string"
-            }
-          }
-          type = "object"
-        }
-        properties = {
-          context    = {}
-          properties = {}
-          traits     = {}
-        }
-        then = {
-          oneOf = [{
-            properties = {
-              name = {
-                pattern = "^(Home|Product\\s{1}Page)$"
-                type    = "string"
-              }
-            }
-          }]
-        }
-        type = "object"
-      })
-      key     = null
-      type    = "COMMON"
       version = 1
     },
     {
