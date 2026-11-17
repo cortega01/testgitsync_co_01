@@ -17,5 +17,16 @@ resource "segment_user" "id-cA6JSsNte6BW6UL8nhLvm4" {
       ]
       role_id = "1Mc8DFMmZbyzdEWmE6k8JVgKAiE"
     },
+    {
+      resources = [
+        {
+          id = "27VW31V86UDE5Ku8dEGR6F"
+          labels = [
+          ]
+          type = "WORKSPACE"
+        },
+      ]
+      role_id = "1PWCliYHNGD6q2xVM3MjSCD5WRU"
+    },
   ]
 }
