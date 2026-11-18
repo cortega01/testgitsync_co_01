@@ -12,8 +12,26 @@ resource "segment_destination_subscription" "id-6afbd56fe64dc0322db7c6a7_tDhgeci
   reverse_etl_schedule = null
   settings = jsonencode({
     data = {
-      "@path" = "$."
+      af_revenue = {
+        "@path" = "$.properties.amount_paid_in_usd"
+      }
+      appsflyer_id = {
+        "@path" = "$.integrations.AppsFlyer.appsFlyerId"
+      }
+      context = {
+        "@path" = "$.context"
+      }
+      customer_user_id = {
+        "@path" = "$.userId"
+      }
+      eventName = {
+        "@path" = "$.event"
+      }
+      eventValue = {
+        "@path" = "$.properties"
+      }
     }
+    enable_batching = false
     headers = {
       authentication = "0f4458c6-689a-4d71-81ec-f7b77a3fbc43"
       content-type   = "application/json"
