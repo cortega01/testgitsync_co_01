@@ -9,7 +9,7 @@ resource "segment_source" "id-FBYFyj8QNqAnWaULMEx6e" {
   metadata = {
     id = "iUM16Md8P2"
   }
-  name     = "Hygiene Source"
+  name     = "Crypto Hygiene Source Testing"
   settings = jsonencode({})
   slug     = "hygiene_source"
 }
