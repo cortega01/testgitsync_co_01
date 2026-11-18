@@ -12,14 +12,11 @@ resource "segment_destination_subscription" "id-6afbd56fe64dc0322db7c6a7_tDhgeci
   reverse_etl_schedule = null
   settings = jsonencode({
     data = {
-      af_revenue = {
-        "@path" = "$.properties.amount_paid_in_usd"
-      }
       appsflyer_id = {
         "@path" = "$.integrations.AppsFlyer.appsFlyerId"
       }
-      context = {
-        "@path" = "$.context"
+      att = {
+        "@path" = "$.context.att"
       }
       customer_user_id = {
         "@path" = "$.userId"
